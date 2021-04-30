@@ -1,0 +1,40 @@
+.table-tools {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+  padding: 10px 0;
+  height: auto;
+}
+
+.table-tools__actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 100;
+  gap: 1rem;
+  color: #63abd8;
+  margin-left: 2rem;
+}
+
+.action {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.action:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.action svg {
+  stroke: #ffffff;
+}

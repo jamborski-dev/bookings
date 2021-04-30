@@ -1,14 +1,16 @@
-input:focus {
+input:focus,
+select:focus {
   outline: none;
 }
 
 .form-group {
   background: #ffffff;
   border-radius: 6px;
-  padding: 5px;
+  padding: 5px 8px;
   display: flex;
   flex-direction: row;
   align-items: center;
+  font-size: .9rem;
 }
 
 .input {

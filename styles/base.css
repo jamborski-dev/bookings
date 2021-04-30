@@ -10,8 +10,22 @@
   --theme-light: #f0f0f0;
   --theme-light__font--grey: #ababab;
 
-  --accent-orange: #edb034;
+  --text: #edb034;
+  --accent-orange: var(--text);
   --accent-coral-red: #fa3e3e;
+
+  /* --theme-color__bg--main: var(--theme-light);
+  --theme-color__bg--secondary: var(--theme-light--darker);
+  --theme-color__font--main: var(--theme-dark); */
+
+  --theme-color__bg--main: var(--theme-dark);
+  --theme-color__bg--secondary: var(--theme-dark_darker);
+  --theme-color__font--main: var(--theme-light);
+}
+
+.theme-dark {
+  --theme-color__bg--main: var(--theme-dark);
+  --theme-color__font--main: var(--theme-light);
 }
 
 * {
@@ -45,8 +59,8 @@ html {
 
 body {
   height: 100%;
-  background: var(--theme-dark);
-  color: var(--theme-light);
+  background: var(--theme-color__bg--main);
+  color: var(--theme-color__font--main);
   font-family: "Ubuntu", "Calibri", "Arial", sans-serif;
 }
 
@@ -67,8 +81,8 @@ body {
 .feather {
   width: 16px;
   height: 16px;
-  stroke: currentColor;
-  stroke-width: 2;
+  stroke: var(--theme-color__font--main);
+  stroke-width: 1;
   stroke-linecap: round;
   stroke-linejoin: round;
   fill: none;

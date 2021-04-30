@@ -7,7 +7,8 @@ table {
 table,
 td,
 th {
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0
 }
 
 th,
@@ -69,6 +70,7 @@ tr td:last-child {
 
 thead {
   position: sticky;
+  z-index: 200;
 }
 thead tr {
   border-top: none;
@@ -109,7 +111,7 @@ tbody tr.day-spacer:hover {
 }
 
 .booking--type {
-  border-left: 4px solid #448191;
+  border-left: 2px solid #448191;
   margin-left: 20px;
 }
 .type--trailer {
@@ -131,11 +133,5 @@ thead tr:nth-child(2) th {
   top: 70px;
   border-bottom: 1px solid var(--accent-orange);
   background: var(--theme-dark);
-  z-index: 1000;
-  transform: translateZ(0);
-  border-bottom: 1px solid var(--accent-orange);
-}
-
-tbody tr th > * {
-  z-index: -1000;
+  border-bottom: 2px solid var(--accent-orange);
 }

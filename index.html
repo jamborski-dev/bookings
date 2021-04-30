@@ -10,12 +10,13 @@
     <link rel="stylesheet" href="styles/content-pane.css" />
     <link rel="stylesheet" href="styles/form.css" />
     <link rel="stylesheet" href="styles/table.css" />
+    <link rel="stylesheet" href="styles/table-tools.css" />
 
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="js/feather.js"></script>
   </head>
   <body>
-    <div class="app-container">
+    <div class="app-container theme-dark">
       <aside>
         <!-- <div class="logo-box">
         <img class="logo-image" src="assets/clipper-logo.jpg" />
@@ -82,20 +83,30 @@
           <!-- here goes table populated from database -->
           <table>
             <thead>
-              <tr class="tools-container">
+              <tr>
                 <th colspan="14">
-                  <div class="tools">
+                  <div class="table-tools">
                     <div class="form-group">
-                      <input type="text" class="input input-search" placeholder="type to search.." />
+                      <input type="text" class="input" placeholder="type to search.." />
                       <i data-feather="search"></i>
                     </div>
-                    <div class="tools__actions">
+                    <div class="table-tools__actions">
                       <span class="action"><i data-feather="server"></i>add slot</span>
                       <span class="action"><i data-feather="file-text"></i>export</span>
                       <span class="action"><i data-feather="framer"></i>split</span>
                       <span class="action"><i data-feather="filter"></i>filter</span>
                       <span class="action"><i data-feather="info"></i>toggle info</span>
                       <span class="action"><i data-feather="maximize"></i>toggle compact view</span>
+                    </div>
+                    <div class="site-select__container form-group">
+                      <label for="site-select">Site</label>
+                      <select class="input" name="site-select">
+                        <option value="dav1">Dav 1 - Danes Way</option>
+                        <option value="dav2">Dav 2 - Rail Port</option>
+                        <option value="dav4">Dav 4 - Magna Park Lutterworth</option>
+                        <option value="edbd">EDBD - Eddie Stobart Bardon</option>
+                        <option value="k3k3">K3K3 - Kinaxia K3</option>
+                      </select>
                     </div>
                   </div>
                 </th>
@@ -123,8 +134,8 @@
                 <th colspan="5">Total: 460</th>
                 <th colspan="5">Capacity: 500</th>
               </tr>
-              <tr class="booking--type type--trailer">
-                <td><span class="booking--status status--live"></span></td>
+              <tr>
+                <td class="booking--type type--trailer"><span class="booking--status status--live"></span></td>
                 <td>7:30</td>
                 <td>DAV1BECFCFTA</td>
                 <td>Unispace Global Limited</td>
@@ -139,8 +150,8 @@
                 <td>Yes</td>
                 <td>MEDU7227730</td>
               </tr>
-              <tr class="booking--type type--trailer">
-                <td><span class="booking--status status--live"></span></td>
+              <tr>
+                <td class="booking--type type--trailer"><span class="booking--status status--live"></span></td>
                 <td>9:00</td>
                 <td>DAV1BECFCFTA</td>
                 <td>Unispace Global Limited</td>
@@ -155,8 +166,8 @@
                 <td>Yes</td>
                 <td>MEDU7227730</td>
               </tr>
-              <tr class="booking--type type--trailer">
-                <td><span class="booking--status status--cancelled"></span></td>
+              <tr>
+                <td class="booking--type type--container"><span class="booking--status status--cancelled"></span></td>
                 <td>11:00</td>
                 <td>DAV1BECTKMSP</td>
                 <td>CargoFE/EV</td>
@@ -172,7 +183,7 @@
                 <td></td>
               </tr>
               <tr class="booking--type type--container">
-                <td><span class="booking--status status--live"></span></td>
+                <td class="booking--type type--trailer"><span class="booking--status status--live"></span></td>
                 <td>15:00</td>
                 <td>CBEUXECKKXIO</td>
                 <td>Unispace Global Limited Unispace Global Limited</td>
@@ -187,8 +198,8 @@
                 <td>Yes</td>
                 <td>MEDU7227730</td>
               </tr>
-              <tr class="booking--type type--container">
-                <td><span class="booking--status status--transfer"></span></td>
+              <tr>
+                <td class="booking--type type--container"><span class="booking--status status--transfer"></span></td>
                 <td>18:00</td>
                 <td>DAV1BECRJPZF</td>
                 <td>Clipper Demand Planning</td>
@@ -210,8 +221,8 @@
               <th colspan="5">Capacity: 500</th>
             </tr>
             <tbody>
-              <tr class="booking--type type--trailer">
-                <td><span class="booking--status status--live"></span></td>
+              <tr>
+                <td class="booking--type type--trailer"><span class="booking--status status--live"></span></td>
                 <td>7:30</td>
                 <td>DAV1BECFCFTA</td>
                 <td>Unispace Global Limited</td>
@@ -226,8 +237,8 @@
                 <td>Yes</td>
                 <td>MEDU7227730</td>
               </tr>
-              <tr class="booking--type type--trailer">
-                <td><span class="booking--status status--live"></span></td>
+              <tr>
+                <td class="booking--type type--trailer"><span class="booking--status status--live"></span></td>
                 <td>9:00</td>
                 <td>DAV1BECFCFTA</td>
                 <td>Unispace Global Limited</td>
@@ -242,8 +253,8 @@
                 <td>Yes</td>
                 <td>MEDU7227730</td>
               </tr>
-              <tr class="booking--type type--trailer">
-                <td><span class="booking--status status--cancelled"></span></td>
+              <tr>
+                <td class="booking--type type--trailer"><span class="booking--status status--cancelled"></span></td>
                 <td>11:00</td>
                 <td>DAV1BECTKMSP</td>
                 <td>CargoFE/EV</td>
@@ -258,8 +269,8 @@
                 <td>Yes</td>
                 <td></td>
               </tr>
-              <tr class="booking--type type--trailer">
-                <td><span class="booking--status status--live"></span></td>
+              <tr>
+                <td class="booking--type type--trailer"><span class="booking--status status--live"></span></td>
                 <td>15:00</td>
                 <td>CBEUXECKKXIO</td>
                 <td>Unispace Global Limited</td>
@@ -274,8 +285,8 @@
                 <td>Yes</td>
                 <td>MEDU7227730</td>
               </tr>
-              <tr class="booking--type type--trailer">
-                <td><span class="booking--status status--transfer"></span></td>
+              <tr>
+                <td class="booking--type type--trailer"><span class="booking--status status--transfer"></span></td>
                 <td>18:00</td>
                 <td>DAV1BECRJPZF</td>
                 <td>Clipper Demand Planning</td>
@@ -297,8 +308,8 @@
               <th colspan="5">Capacity: 500</th>
             </tr>
             <tbody>
-              <tr class="booking--type type--trailer">
-                <td><span class="booking--status status--live"></span></td>
+              <tr>
+                <td class="booking--type type--trailer"><span class="booking--status status--live"></span></td>
                 <td>7:30</td>
                 <td>DAV1BECFCFTA</td>
                 <td>Unispace Global Limited</td>
@@ -313,8 +324,8 @@
                 <td>Yes</td>
                 <td>MEDU7227730</td>
               </tr>
-              <tr class="booking--type type--trailer">
-                <td><span class="booking--status status--live"></span></td>
+              <tr>
+                <td class="booking--type type--trailer"><span class="booking--status status--live"></span></td>
                 <td>9:00</td>
                 <td>DAV1BECFCFTA</td>
                 <td>Unispace Global Limited</td>
@@ -329,8 +340,8 @@
                 <td>Yes</td>
                 <td>MEDU7227730</td>
               </tr>
-              <tr class="booking--type type--trailer">
-                <td><span class="booking--status status--cancelled"></span></td>
+              <tr>
+                <td class="booking--type type--trailer"><span class="booking--status status--cancelled"></span></td>
                 <td>11:00</td>
                 <td>DAV1BECTKMSP</td>
                 <td>CargoFE/EV</td>
@@ -345,8 +356,8 @@
                 <td>Yes</td>
                 <td></td>
               </tr>
-              <tr class="booking--type type--trailer">
-                <td><span class="booking--status status--live"></span></td>
+              <tr>
+                <td class="booking--type type--trailer"><span class="booking--status status--live"></span></td>
                 <td>15:00</td>
                 <td>CBEUXECKKXIO</td>
                 <td>Unispace Global Limited</td>
@@ -361,8 +372,8 @@
                 <td>Yes</td>
                 <td>MEDU7227730</td>
               </tr>
-              <tr class="booking--type type--trailer">
-                <td><span class="booking--status status--transfer"></span></td>
+              <tr>
+                <td class="booking--type type--trailer"><span class="booking--status status--transfer"></span></td>
                 <td>18:00</td>
                 <td>DAV1BECRJPZF</td>
                 <td>Clipper Demand Planning</td>
