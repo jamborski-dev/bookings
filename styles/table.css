@@ -1,0 +1,141 @@
+table {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+}
+
+table,
+td,
+th {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 15px 10px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 100px;
+}
+
+th {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--theme-light__font--grey);
+}
+
+
+
+td {
+  font-size: 0.9rem;
+  vertical-align: middle;
+  position: relative;
+  font-weight: 300;
+}
+
+td > svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-55%);
+  left: 10px;
+  right: 0;
+  stroke: var(--theme-light__font--grey);
+}
+
+tr {
+  border-top: 1px solid #404c4f;
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+}
+
+tbody tr td {
+  z-index: 0;
+}
+
+tbody tr:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+tr th:nth-child(1),
+tr td:nth-child(1) {
+  padding-left: 2rem;
+}
+tr th:last-child,
+tr td:last-child {
+  padding-right: 2rem;
+}
+
+thead {
+  position: sticky;
+}
+thead tr {
+  border-top: none;
+}
+tbody tr:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+thead tr:hover {
+  background: none;
+}
+
+tbody tr.day-spacer,
+tbody tr.day-spacer:hover {
+  background: #2b2d2e;
+}
+
+.day-spacer th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 300;
+}
+
+.with-icon {
+  padding-left: calc(10px + 24px);
+}
+
+.booking--status {
+  --size: 18px;
+  width: var(--size);
+  height: var(--size);
+  display: block;
+  background: #b5b5a7;
+  border-radius: 50%;
+}
+
+.status--live {
+  background: #8bcc1b;
+}
+
+.booking--type {
+  border-left: 4px solid #448191;
+  margin-left: 20px;
+}
+.type--trailer {
+  border-left-color: #a7663b;
+}
+.type--container {
+  border-left-color: #ede500;
+}
+
+thead tr th {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transform: translateZ(0);
+  background: var(--theme-dark);
+}
+
+thead tr:nth-child(2) th {
+  top: 70px;
+  border-bottom: 1px solid var(--accent-orange);
+  background: var(--theme-dark);
+  z-index: 1000;
+  transform: translateZ(0);
+  border-bottom: 1px solid var(--accent-orange);
+}
+
+tbody tr th > * {
+  z-index: -1000;
+}

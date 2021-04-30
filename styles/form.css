@@ -1,0 +1,24 @@
+input:focus {
+  outline: none;
+}
+
+.form-group {
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.input {
+  background: none;
+  border: none;
+  padding: 5px;
+}
+
+.form-group > svg {
+  margin: auto 5px;
+  cursor: pointer;
+  stroke: var(--theme-light__font--grey);
+}
